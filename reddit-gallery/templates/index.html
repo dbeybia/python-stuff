@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hello!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<div class="container">
+  <div class="jumbotron">
+  <center>
+    <h1>reddit-gallery</h1>
+    <p>browse reddit images by subreddit</p>
+</center>
+  </center>
+  </div>
+
+
+{% for submission in submissions %}
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-4">
+  <img class="img-zoom" src="{{ submission.url }}" alt="Image." width="300" height="300" />
+  </div>
+ {{ '\n' }}
+ <br>
+{% endfor %}
+
+
+</body>
+</html>
